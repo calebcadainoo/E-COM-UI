@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json" />
+	<title>Bags Ecommerce</title>
+	<link rel="stylesheet" href="css/magic.css">
+	<link rel="stylesheet" href="css/modalcode.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- main header -->
+	<header class="main-header">
+		<div class="main-header-content">
+			<!-- brand image -->
+			<div class="brand-image magictime puffIn">
+				<img src="img/bag2-removebg-preview.png" alt="brand image">
+			</div>
+			<!-- brand info -->
+			<div class="brand-info">
+				<div class="brand-name magictime slideDownReturn">Bagssvles</div>
+				<div class="brand-motto magictime swashIn">Exquisite bags for classic people</div>
+			</div>
+		</div>
+	</header>
+	<!-- end of main header -->
+
+	<!-- search items -->
+	<div class="search-comp centroid_700">
+		search
+	</div>
+	<!-- end of search items -->
+
+	<!-- products -->
+	<section class="centroid productsbx app-cover">
+		<div class="product-cate-title">BackPacks</div>
+		<div class="product-list">
+
+		</div>
+
+		<div class="product-cate-title">Handbags</div>
+		<div class="product-list">
+
+		</div>
+
+		<!-- load more items -->
+		<button class="button load-products trans">Load More Products</button>
+	</section>
+	<!-- end of products -->
+
+	<!-- footer -->
+	<footer class="footer">
+		2020 &copy; Crosby Roads
+	</footer>
+	<!-- end of footer -->
+</body>
+</html>
+
+<script>
+	$(function(){
+		var img = 0;
+		for (let index = 0; index < 7; index++) {
+			img = index + 1;
+			$('.product-list:eq(0)').append(`
+				<!-- grid -->
+				<div class="product-item">
+					<div class="product-image imgfx">
+						<img src="img/bag`+ img +`.jpg" alt="hand bag">
+					</div>
+					<div class="product-name">Ladies Handbag</div>
+					<div class="product-price discounted">GHS 23.99</div>
+					<!-- <div class="product-discount">20%</div> -->
+				</div>
+			`);
+		}
+
+		for (let index = 7; index < 13; index++) {
+			img = index + 1;
+			$('.product-list:eq(1)').append(`
+				<!-- grid -->
+				<div class="product-item">
+					<div class="product-image imgfx">
+						<img class="trans" src="img/bag`+ img +`.jpg" alt="hand bag">
+					</div>
+					<div class="product-name">Ladies Handbag</div>
+					<div class="product-price discounted">GHS 23.99</div>
+					<!-- <div class="product-discount">20%</div> -->
+				</div>
+			`);
+		}
+	});
+</script>
