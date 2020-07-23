@@ -54,6 +54,78 @@
 	</section>
 	<!-- end of products -->
 
+	<!-- prodyuct details ui -->
+	<article class="product-detailsbx overlay">
+		<!-- product view area -->
+		<div class="centroid app-paper app-cover">
+			<!-- main view area -->
+			<div class="product-main-info">
+				<!-- left -->
+				<div class="product-pics">
+					<div class="product-view-pic">
+						main pic show shere
+					</div>
+					<div class="product-other-pics">
+						a carousel of pics will show here
+					</div>
+				</div>
+				<!-- right -->
+				<div class="product-summarybx">
+					<div class="product-name">
+						Lightweight Medium Crossbody Bag with Tassel
+					</div>
+					<br>
+					<div class="product-var product-color"><b>Color:</b> <span>Black</span></div>
+					<div class="product-var product-brand"><b>Brand:</b> <span>Bagpack GH</span></div>
+					<br>
+					<button class="button btn-add-cart trans">Add to Cart</button>
+				</div>
+			</div>
+
+			<!-- sub info area -->
+			<div class="product-subinfo-area">
+				<!-- left -->
+				<div class="product-dimensions">
+					<div class="product-measurement">
+						<h3 class="app-h3">Measurement</h3>
+						<div class="product-text">
+							<p>- Capacity 20 L </p>
+							<p>- Main compartment: W 28 x H 45/65 x D 16 cm</p>
+							<p>- Laptop compartment on backside: W 28 x H 36 x D 2 cm</p>
+							
+						</div>
+					</div>
+					<!-- material -->
+					<div class="product-measurement">
+						<h3 class="app-h3">Material</h3>
+						<div class="product-text">
+							<p>
+								Made with water-resistant Cordura® EcoMade polyester made from 40% recycled polyester. The Cordura® weave is tight and dense, known for its durability and resistance to abrasions, tears and scuffs. The lining is made from 100% recycled polyester and the trimmings are produced from recycled webbing. 
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- right -->
+				<div class="product-sepcification">
+					<h3 class="app-h3">Specifications</h3>
+					<div class="product-text">
+						<p>
+							This water-resistant and functional backpack from our 
+							Urban Outdoor series is constructed with 
+							Cordura® EcoMade polyester and leather patch 
+							details. It features a 13" laptop compartment and can 
+							carry up to 20 L. The versatile and practical features 
+							along with heritage leather details make this bag a modern classic to be worn everyday or for those weekend hikes.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end of product view area -->
+	</article>
+	<!-- end of prodyuct details ui -->
+
 	<!-- footer -->
 	<footer class="footer">
 		2020 &copy; Crosby Roads
@@ -64,12 +136,13 @@
 
 <script>
 	$(function(){
+		// Populate products: Backpacks
 		var img = 0;
 		for (let index = 0; index < 7; index++) {
 			img = index + 1;
 			$('.product-list:eq(0)').append(`
 				<!-- grid -->
-				<div class="product-item">
+				<div id="`+ img +`" class="product-item">
 					<div class="product-image imgfx">
 						<img src="img/bag`+ img +`.jpg" alt="hand bag">
 					</div>
@@ -80,11 +153,12 @@
 			`);
 		}
 
+		// Populate products: Handbags
 		for (let index = 7; index < 13; index++) {
 			img = index + 1;
 			$('.product-list:eq(1)').append(`
 				<!-- grid -->
-				<div class="product-item">
+				<div id="`+ img +`" class="product-item">
 					<div class="product-image imgfx">
 						<img class="trans" src="img/bag`+ img +`.jpg" alt="hand bag">
 					</div>
@@ -94,5 +168,10 @@
 				</div>
 			`);
 		}
+
+		// Show Product Details
+		$(document).on('click', '.product-item', function(){
+			alert($(this).attr('id'));
+		});
 	});
 </script>

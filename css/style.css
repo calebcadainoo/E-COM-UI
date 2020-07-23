@@ -6,6 +6,7 @@ html, body{
 	margin: 0;
 	cursor: default;
 	font-family: Mulish, sans-serif;
+	overflow: hidden; /*temporary remove afterwards*/
 }
 
 /* Main Header */
@@ -147,7 +148,6 @@ html, body{
 	border: none;
 	padding: 15px 25px;
 	border-radius: 3px;
-	margin: auto;
 	display: table;
 	cursor: pointer;
 }
@@ -156,10 +156,70 @@ html, body{
 }
 
 .load-products{
+	margin: auto;
 	background: #333;
 	color: #f3f3f3;
 	text-transform: uppercase;
 	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+
+/* Product Details */
+.overlay{
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	/* background: rgba(170, 170, 170, 0.7); */
+	background: #fff;
+	overflow-y: auto;
+}
+
+.product-detailsbx{
+	padding: 20px;
+	padding-top: 70px;
+}
+
+.app-paper{
+	background: #fff;
+	border-radius: 5px;
+	/* box-shadow: 0px 3px 22px rgba(0, 0, 0, 0.3); */
+}
+
+.product-main-info{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 30px;
+}
+
+/* left */
+.product-pics{
+	height: 450px;
+}
+
+.product-view-pic{
+
+}
+
+/* right */
+.product-summarybx{
+	padding: 20px;
+	padding-top: 120px;
+}
+
+.product-var{
+	margin-bottom: 12px;
+}
+
+.btn-add-cart{
+	width: 100%;
+	max-width: 300px;
+	text-transform: uppercase;
+	background: #333;
+	color: #f5f5f5;
 	letter-spacing: 1px;
 }
 
