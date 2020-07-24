@@ -189,6 +189,24 @@ html, body{
 	/* box-shadow: 0px 3px 22px rgba(0, 0, 0, 0.3); */
 }
 
+/* modal controls */
+.app-modal-bx{
+	padding: 12px 0;
+	margin-bottom: 20px;
+}
+
+.back-ctrl{
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 1px;
+	padding-left: 32px;
+	background-image: url(../ico/left-arrow.png);
+	background-size: 22px;
+	background-position: left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
 .product-main-info{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -197,11 +215,38 @@ html, body{
 
 /* left */
 .product-pics{
-	height: 450px;
+	/* height: 450px; */
 }
 
 .product-view-pic{
+	text-align: center;
+	margin-bottom: 20px;
+}
 
+.product-view-pic img{
+	height: 450px;
+	border-radius: 3px;
+}
+
+.product-other-pics{
+	display: table;
+	margin: auto;
+}
+
+.product-thumbnail{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	padding: 4px;
+	box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.thumbnail-selected{
+	box-shadow: 0px 3px 12px orangered !important;
 }
 
 /* right */
@@ -212,6 +257,29 @@ html, body{
 
 .product-var{
 	margin-bottom: 12px;
+	line-height: 1.5em;
+}
+
+.add-wishlist{
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	border-radius: 50%;
+	box-shadow: 0px 1px 22px -6px rgba(0, 0, 0, 0.3);
+	margin-bottom: 30px;
+	background-image: url(../ico/wishlist-add.png);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.added-wishlist{
+	background-image: url(../ico/wishlist-added.png) !important;
+}
+
+.product-detail-price{
+	font-size: 25px;
 }
 
 .btn-add-cart{
@@ -222,6 +290,79 @@ html, body{
 	color: #f5f5f5;
 	letter-spacing: 1px;
 }
+
+.product-subinfo-area{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 24px;
+}
+
+.product-dimensions{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 14px;
+}
+
+.app-h3{
+	text-transform: uppercase;
+	font-size: 20px;
+	color: rgba(0, 0, 0, 0.7);
+	letter-spacing: 1px;
+}
+
+.product-text{
+	line-height: 2em;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+}
+
+.product-action-bx .add-wishlist{
+	display: none;
+}
+
+
+/* Cart */
+.product-quantitybx{
+	max-width: 120px;
+	width: 100%;
+	height: 33px;
+	display: grid;
+	grid-template-columns: repeat(3, calc(100%/3));
+	margin-bottom: 23px;
+	border-radius: 5px;
+	box-shadow: 0px 3px 22px -6px rgba(0, 0, 0, 0.3);
+}
+
+.quantity-ctrl{
+	text-align: center;
+}
+
+.inputbx{
+	border: none;
+	/* border: 1px solid rgba(0, 0, 0, 0.07); */
+}
+
+.quantity-number{
+	height: 100%;
+	background: #fff;
+	border-radius: 3px;
+}
+
+.quantity-dec{
+	font-size: 20px;
+	line-height: 1.2em;
+	font-weight: 700;
+	border-right: 1px solid rgba(0, 0, 0, 0.07);
+	cursor: pointer;
+}
+.quantity-inc{
+	font-size: 18px;
+	line-height: 1.5em;
+	font-weight: 700;
+	border-left: 1px solid rgba(0, 0, 0, 0.07);
+	cursor: pointer;
+}
+
 
 
 /* Footer */
@@ -257,6 +398,61 @@ html, body{
 	}
 }
 
+@media screen and (max-width: 999px){
+	.product-main-info{
+		max-width: 700px;
+		margin: auto;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.product-dimensions{
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.product-view-pic img{
+		width: 100%;
+		height: unset !important;
+	}
+
+	.product-summarybx{
+		padding-top: 30px;
+		text-align: center;
+	}
+
+	.product-action-bx{
+		width: 100%;
+		height: 60px !important;
+		padding: 10px;
+		padding-left: 20px;
+		/* display: table; */
+		position: fixed;
+		background: #fff;
+		left: 0;
+		bottom: 0;
+		box-shadow: 0px -3px 22px rgba(0, 0, 0, 0.3);
+	}
+
+	.product-action-bx .add-wishlist{
+		display: block;
+		float: left;
+	}
+
+	.product-summary-ctrl .add-wishlist{
+		display: none;
+	}
+
+	.product-action-bx .btn-add-cart{
+		float: right;
+	}
+}
+
+@media screen and (max-width: 720px){
+	.product-subinfo-area{
+		grid-template-columns: 1fr;
+		padding-bottom: 90px;
+	}
+}
+
 @media screen and (max-width: 652px){
 	.product-list{
 		grid-template-columns: repeat(2, 1fr);
@@ -264,6 +460,12 @@ html, body{
 
 	.product-image{
 		height: 200px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.product-action-bx .btn-add-cart{
+		max-width: 200px;
 	}
 }
 

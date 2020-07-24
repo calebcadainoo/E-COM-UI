@@ -69,7 +69,7 @@ input, textarea{
 	display: inline-block;
 	color: #fff;
 	border: 8px solid transparent;	
-	border-bottom: 8px solid #0cac16;
+	border-bottom: 8px solid #333;
 }
 /*end of custom tool tips*/
 
