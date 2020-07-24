@@ -58,27 +58,66 @@
 	<article class="product-detailsbx overlay">
 		<!-- product view area -->
 		<div class="centroid app-paper app-cover">
+			<!-- modal controls -->
+			<div class="app-modal-bx">
+				<div class="back-ctrl" title="Go Back">Back</div>
+			</div>
+
 			<!-- main view area -->
 			<div class="product-main-info">
 				<!-- left -->
 				<div class="product-pics">
 					<div class="product-view-pic">
-						main pic show shere
+						<img src="img/bag13.jpg" alt="" srcset="">
 					</div>
 					<div class="product-other-pics">
-						a carousel of pics will show here
+						<!-- view -->
+						<div class="product-thumbnail thumbnail-selected imgfx">
+							<img src="img/bag13.jpg" alt="" srcset="">
+						</div>
+						<!-- view -->
+						<div class="product-thumbnail imgfx">
+							<img src="img/bag12.jpg" alt="" srcset="">
+						</div>
+						<!-- view -->
+						<div class="product-thumbnail imgfx">
+							<img src="img/bag11.jpg" alt="" srcset="">
+						</div>
+						<!-- view -->
+						<div class="product-thumbnail imgfx">
+							<img src="img/bag10.jpg" alt="" srcset="">
+						</div>
 					</div>
 				</div>
 				<!-- right -->
 				<div class="product-summarybx">
-					<div class="product-name">
+					<!-- add to wish list -->
+					<div class="product-summary-ctrl">
+						<div class="product-var add-wishlist" data-title="Save to Wishlist"></div>
+					</div>
+					<!-- product name -->
+					<div class="product-name product-var">
 						Lightweight Medium Crossbody Bag with Tassel
 					</div>
-					<br>
+					<!-- price -->
+					<div class="product-var product-detail-price">GHS 29.99</div>
+					<!-- color -->
 					<div class="product-var product-color"><b>Color:</b> <span>Black</span></div>
+					<!-- brand -->
 					<div class="product-var product-brand"><b>Brand:</b> <span>Bagpack GH</span></div>
 					<br>
-					<button class="button btn-add-cart trans">Add to Cart</button>
+					<!-- quantity -->
+					<!-- <div class="product-var product-quantitybx">
+						<div class="quantity-ctrl quantity-dec">-</div>
+						<input type="text" name="productQuantity" class="quantity-ctrl inputbx quantity-number" minlength="1" value="1">
+						<div class="quantity-ctrl quantity-inc">+</div>
+					</div> -->
+
+					<div class="product-action-bx">
+						<!-- add to wish list -->
+						<div class="product-var add-wishlist" title="Save to Wishlist"></div>
+						<button class="button btn-add-cart trans">Add to Cart</button>
+					</div>
 				</div>
 			</div>
 
@@ -89,9 +128,9 @@
 					<div class="product-measurement">
 						<h3 class="app-h3">Measurement</h3>
 						<div class="product-text">
-							<p>- Capacity 20 L </p>
-							<p>- Main compartment: W 28 x H 45/65 x D 16 cm</p>
-							<p>- Laptop compartment on backside: W 28 x H 36 x D 2 cm</p>
+							<p>Width: 31cm Height: 45cm</p>
+							<p>Depth: 19cm Holds:25L</p>
+							<p>Laptop Compartment: W 28 x H 36 x D 2 cm</p>
 							
 						</div>
 					</div>
@@ -172,6 +211,10 @@
 		// Show Product Details
 		$(document).on('click', '.product-item', function(){
 			alert($(this).attr('id'));
+		});
+
+		$(document).on('click', '.product-thumbnail', function(){
+			// let src = $($(this) + ' img').attr('src');
 		});
 	});
 </script>
